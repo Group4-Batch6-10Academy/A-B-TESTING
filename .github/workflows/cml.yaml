@@ -20,17 +20,17 @@ jobs:
         run: |
           # Your ML workflow goes here
           pip install -r requirements.txt
-          python train.py
+          python EDA.py
       - name: Write CML report
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Post reports as comments in GitHub PRs
           echo "## Model Metrics" >> report.md
-          cat metrics.txt >> report.md
+          #cat metrics.txt >> report.md
           
           echo "## Data Visualizations" >> report.md
-          cml publish feature_importance.png --md >> report.md
-          cml publish residuals.png --md >> report.md
+          cml publish plot.barplot.png --md >> report.md
+          #cml publish residuals.png --md >> report.md
           
           cml send-comment report.md
