@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, './AB_Testing')
+sys.path.insert(0, '../scripts')
 
 import matplotlib.pyplot as plt
 import numpy as np
