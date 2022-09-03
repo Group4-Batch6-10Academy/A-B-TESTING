@@ -39,9 +39,7 @@ class Training():
     def feature_importance(self):
         if self.model.__class__.__name__ == "LogisticRegression":
             importance = self.model.coef_[0]
-        if self.model.__class__.__name__ == "RandomForestRegressor":
-            importance = self.model.feature_importances_
-        if self.model.__class__.__name__ == "XGBoost":
+        else:
             importance = self.model.feature_importances_
         # summarize feature importance
         for i, v in enumerate(importance):
