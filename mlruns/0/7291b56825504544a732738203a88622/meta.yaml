@@ -1,0 +1,15 @@
+artifact_uri: file:///home/hmicheal/Documents/Files/Projects/10xac/A-B-TESTING/data/mlruns/0/7291b56825504544a732738203a88622/artifacts
+end_time: 1662204980462
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 7291b56825504544a732738203a88622
+run_uuid: 7291b56825504544a732738203a88622
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1662204733297
+status: 3
+tags: []
+user_id: hmicheal
