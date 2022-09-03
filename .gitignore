@@ -1,5 +1,6 @@
 data/
 scripts/__pycache__
+test_scripts/__pycache__
 .history/
 
 
