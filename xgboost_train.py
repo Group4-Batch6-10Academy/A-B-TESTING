@@ -17,6 +17,8 @@ if __name__ == "__main__":
     data_loader = DataLoader()
     df = data_loader.read_data('data/', 'AdSmartABdata.csv')
 
+    # The data reader changes directory
+    os.chdir("../")
     data_processor = DataProcessor(df)
     df = data_processor.processes_data()
     df = data_processor.label_encoder()

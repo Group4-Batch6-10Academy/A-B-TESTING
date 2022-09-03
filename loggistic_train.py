@@ -17,6 +17,8 @@ if __name__ == "__main__":
     data_loader = DataLoader()
     df = data_loader.read_data('data/', 'AdSmartABdata.csv')
 
+    # The data reader changes directory
+    os.chdir("../")
     data_processor = DataProcessor(df)
     df = data_processor.processes_data()
     df = data_processor.label_encoder()
@@ -39,7 +41,7 @@ if __name__ == "__main__":
         "basic score", data_trainer.basic_score(X_test, y_test))
     mlflow.log_metric("f1_score", data_trainer.f1_score(X_test, y_test))
     mlflow.sklearn.log_model(model, "logistic regression model")
-    mlflow.log_artifact("Confusion_Matrix.png")
-    mlflow.log_artifact("ROC_Curve.png")
+    mlflow.log_artifact("images/Confusion_Matrix.png")
+    mlflow.log_artifact("images/ROC_Curve.png")
 
     print("Model saved in run %s" % mlflow.active_run().info.run_uuid)
