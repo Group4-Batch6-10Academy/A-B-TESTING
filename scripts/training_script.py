@@ -46,7 +46,7 @@ class Training():
             print('Feature: %0d, Score: %.5f' % (i, v))
         # plot feature importance
         plt.bar([x for x in range(len(importance))], importance)
-        plt.savefig("images/Feature_Importance.png")
+        plt.savefig("../images/Feature_Importance.png")
         plt.show()
 
     def basic_score(self, X_test, y_test):
@@ -66,7 +66,7 @@ class Training():
         auc = metrics.roc_auc_score(y_test, y_pred)
         plt.plot(fpr, tpr, label="data 1, auc="+str(auc))
         plt.legend(loc=4)
-        plt.savefig("images/ROC_Curve.png")
+        plt.savefig("../images/ROC_Curve.png")
         plt.show()
 
     def confusion_matrix(self, X_test, y_test):
@@ -85,7 +85,7 @@ class Training():
         plt.title('Confusion matrix', y=1.1)
         plt.ylabel('Actual label')
         plt.xlabel('Predicted label')
-        plt.savefig("images/Confusion_Matrix.png")
+        plt.savefig("../images/Confusion_Matrix.png")
         plt.show()
 
     def classification_report(self, X_test, y_test):
